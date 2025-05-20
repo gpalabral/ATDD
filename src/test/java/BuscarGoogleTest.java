@@ -14,17 +14,19 @@ import io.github.bonigarcia.wdm.*;
 import org.testng.Assert;
 
 /****************************************/
-// Historia de Usuario: Como usuario quiero buscar terminos en Google
+// Historia de Usuario: Como usuario quiero verificar que el boton "Buscar con Google" se despliega
 //
-// Prueba de Aceptacion: Verificar que el termino de busqueda sea mostrado en la pagina de resultados
+// Prueba de Aceptacion: Verificar que el boton de busqueda tenga el texto "Buscar con Google"
 //
-// 1. Ingresar a la pagina de Google
-// 2. En el campo de texto, escribir un termino de busqueda i.e. Universidad Catolica Boliviana
-// 3. Presionar la tecla Enter
+// 1. Ingresar a la pagina de Google: https://www.google.com
+// 2. Buscar el boton "Buscar con Google"
+
 // 
-// Resultado Esperado: El termino de busqueda, i.e. Universidad Catolica Boliviana, 
-// debe mostrarse en la pagina de resultados
+// Resultado Esperado: El boton "Buscar con Google" debe estar presente y ser visible
 /****************************************/
+
+
+//Para ejecutar en la linea de comando: mvn clean compile test -Dtest=BuscarGoogleTest
 
 public class BuscarGoogleTest {
     
@@ -32,6 +34,8 @@ public class BuscarGoogleTest {
     
     @BeforeTest
     public void setDriver() throws Exception{
+
+        //https://sites.google.com/chromium.org/driver/getting-started
         
     	String path = "/Users/gustavo/apps/chromedriver-mac-x64_119/chromedriver119";
         
@@ -40,7 +44,6 @@ public class BuscarGoogleTest {
         WebDriverManager.chromedriver().setup();
         
         driver = new ChromeDriver();
-        
         
     }
     
@@ -58,51 +61,42 @@ public class BuscarGoogleTest {
         String googleUrl = "https://www.google.com";
         driver.get(googleUrl);
         
-        try{
-            TimeUnit.SECONDS.sleep(3);
-        }
-        catch(InterruptedException e){
-            e.printStackTrace();
-        } 
         
         /**************Logica de la prueba***************/
         // 2. En el campo de texto, escribir un criterio de busqueda
         
         /*Capturar el campo de busqueda*/
         
-        WebElement campoBusqueda = driver.findElement(By.name("q"));
+        WebElement boton = driver.findElement(By.name("btnK"));
 
         /*Escribir el termino de busqueda*/
-        campoBusqueda.sendKeys("Universidad Catolica Boliviana");
+        
+        
+        //campoBusqueda.sendKeys("Universidad Catolica Boliviana");
         
         try{
-            TimeUnit.SECONDS.sleep(7);
+            TimeUnit.SECONDS.sleep(3);
         }
         catch(InterruptedException e){
         	e.printStackTrace();
         }    
         
         //3. Presionar la tecla Enter
-        campoBusqueda.submit();
+        //campoBusqueda.submit();
         
         
-        try{
-            TimeUnit.SECONDS.sleep(3);
-        }
-        catch(InterruptedException e){
-            e.printStackTrace();
-        } 
+        
         
         /************Verificacion de la situacion esperada - Assert***************/
         
-        WebElement resultado = driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/table/tbody/tr[1]/td/div/div/div/div/h3/a"));
+       // WebElement resultado = driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/table/tbody/tr[1]/td/div/div/div/div/h3/a"));
 
 
-        String label = resultado.getText();
-        System.out.println("Texto del resultado:: "+label);
+        String label = boton.getAttribute("value");
+        System.out.println("Texto del boton:: "+label);
         
         
-        Assert.assertEquals(label,"Universidad Católica Boliviana");
+        Assert.assertEquals(label,"Buscar con Google");
     }
     
    

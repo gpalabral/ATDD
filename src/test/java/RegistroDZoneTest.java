@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 /****************************************/
-//Historia de Usuario: Como usuario nuevo quiero registrar mis datos
+//Historia de Usuario: Como usuario nuevo quiero registrar mis datos en Dzone.com
 //
 //Prueba de Aceptacion: Verificar que se muestren alertas para los campos obligatorios
 //
@@ -23,6 +23,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 //Resultado Esperado: Se deben mostrar mensajes de alerta para los campos obligatorios que no fueron llenados
 /****************************************/
 
+//Para ejecutar en la linea de comando: mvn clean compile test -Dtest=RegistroDZoneTest
 
 public class RegistroDZoneTest {
     
@@ -57,7 +58,7 @@ public class RegistroDZoneTest {
         
         joinLink.click();
         
-        //Esperamos 3 segundos
+        //Esperamos 3 segundos para que se renderice la siguiente pagina
         try{
             TimeUnit.SECONDS.sleep(3);
         }
@@ -77,9 +78,17 @@ public class RegistroDZoneTest {
         }
         
         joinButton.click();
+
+        try{
+            TimeUnit.SECONDS.sleep(5);
+        }
+        catch(InterruptedException e){
+            e.printStackTrace();
+        }
        
         
         /************Verificacion de la situacion esperada - Assert***************/
+        
         
         WebElement iconAlert = driver.findElement(By.xpath("//*[@id=\"login\"]/div/div[2]/div[1]/div[2]/form/div[1]/span[2]/i"));
         Assert.assertEquals(true, iconAlert.isDisplayed());
