@@ -70,13 +70,6 @@ public class RegistroDZoneTest {
         //3. Presionar el boton Join
         WebElement joinButton = driver.findElement(By.xpath("//*[@id=\"login\"]/div/div[2]/div[3]/button"));
         
-        try{
-            TimeUnit.SECONDS.sleep(3);
-        }
-        catch(InterruptedException e){
-            e.printStackTrace();
-        }
-        
         joinButton.click();
 
         try{
@@ -85,6 +78,7 @@ public class RegistroDZoneTest {
         catch(InterruptedException e){
             e.printStackTrace();
         }
+        
        
         
         /************Verificacion de la situacion esperada - Assert***************/
