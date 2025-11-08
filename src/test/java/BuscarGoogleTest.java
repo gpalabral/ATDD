@@ -18,8 +18,8 @@ import org.testng.Assert;
 //
 // Prueba de Aceptacion: Verificar que el boton de busqueda tenga el texto "Buscar con Google"
 //
-// 1. Ingresar a la pagina de Google: https://www.google.com
-// 2. Buscar el boton "Buscar con Google"
+// Paso 1. Ingresar a la pagina de Google: https://www.google.com
+// Paso 2. Buscar el boton "Buscar con Google"
 
 // 
 // Resultado Esperado: El boton "Buscar con Google" debe estar presente y ser visible
@@ -55,48 +55,32 @@ public class BuscarGoogleTest {
     @Test
     public void paginaPrincipalGoogle(){
         
-        /**************Preparacion de la prueba***********/
+        /**************  1. Preparacion de la prueba***********/
     	
-    	//1. Ingresar a la pagina de Google
+    	//Paso 1. Ingresar a la pagina de Google
         String googleUrl = "https://www.google.com";
         driver.get(googleUrl);
         
         
-        /**************Logica de la prueba***************/
-        // 2. En el campo de texto, escribir un criterio de busqueda
+        /************** 2. Logica de la prueba***************/
+        // Paso 2. Buscar el boton "Buscar con Google"
         
-        /*Capturar el campo de busqueda*/
+        /*Capturar el boton "Buscar con Google"*/
         
         WebElement boton = driver.findElement(By.name("btnK"));
 
-        /*Escribir el termino de busqueda*/
-        
-        
-        //campoBusqueda.sendKeys("Universidad Catolica Boliviana");
-        
         try{
             TimeUnit.SECONDS.sleep(3);
         }
         catch(InterruptedException e){
         	e.printStackTrace();
         }    
+        String txtBoton = boton.getAttribute("value");
+        System.out.println("Texto del boton:: "+txtBoton);
         
-        //3. Presionar la tecla Enter
-        //campoBusqueda.submit();
+        /************ 3. Verificacion de la situacion esperada - Assert ***************/
         
-        
-        
-        
-        /************Verificacion de la situacion esperada - Assert***************/
-        
-       // WebElement resultado = driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/table/tbody/tr[1]/td/div/div/div/div/h3/a"));
-
-
-        String label = boton.getAttribute("value");
-        System.out.println("Texto del boton:: "+label);
-        
-        
-        Assert.assertEquals(label,"Buscar con Google");
+        Assert.assertEquals(txtBoton,"Buscar con Google");
     }
     
    

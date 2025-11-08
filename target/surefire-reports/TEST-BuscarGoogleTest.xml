@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="RegistroDZoneTest" time="20.113" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="BuscarGoogleTest" time="3.791" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.14+8-LTS-191"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/gustavo/Documents/G2/GUS/UCB/Maestria Full Stack/Modulo de Integración y Despliegue Continuo/Source/ATDD"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/gustavo/Documents/G2/GUS/UCB/Maestria Full Stack/Modulo de Integración y Despliegue Continuo/Source/ATDD"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -12,7 +12,7 @@
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="test" value="RegistroDZoneTest"/>
+    <property name="test" value="BuscarGoogleTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/Users/gustavo/Documents/G2/GUS/UCB/Maestria Full Stack/Modulo de Integración y Despliegue Continuo/Source/ATDD"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
@@ -40,7 +40,7 @@
     <property name="java.class.path" value="/Users/gustavo/apps/apache-maven-3.3.9/boot/plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean compile test -Dtest=RegistroDZoneTest"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean compile test -Dtest=BuscarGoogleTest"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -60,5 +60,5 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="RegistroDZoneTest" name="verificarMensajeErrorAlRegistrar" time="20.113"/>
+  <testcase classname="BuscarGoogleTest" name="paginaPrincipalGoogle" time="3.791"/>
 </testsuite>
