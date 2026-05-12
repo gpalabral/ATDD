@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: BuscarGoogleTest
+Test set: UcbLaPazTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.312 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.538 sec

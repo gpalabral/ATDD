@@ -2,24 +2,24 @@
 <testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-08T00:38:26Z" name="BuscarGoogleTest" finished-at="2025-11-08T00:38:33Z" duration-ms="6093">
+  <suite started-at="2026-05-11T23:56:31Z" name="UcbLaPazTest" finished-at="2026-05-11T23:56:44Z" duration-ms="13203">
     <groups>
     </groups>
-    <test started-at="2025-11-08T00:38:26Z" name="Command line test" finished-at="2025-11-08T00:38:33Z" duration-ms="6093">
-      <class name="BuscarGoogleTest">
-        <test-method is-config="true" signature="setDriver()[pri:0, instance:BuscarGoogleTest@3fd7a715]" started-at="2025-11-07T20:38:26Z" name="setDriver" finished-at="2025-11-07T20:38:29Z" duration-ms="2187" status="PASS">
+    <test started-at="2026-05-11T23:56:31Z" name="Command line test" finished-at="2026-05-11T23:56:44Z" duration-ms="13203">
+      <class name="UcbLaPazTest">
+        <test-method is-config="true" signature="setDriver()[pri:0, instance:UcbLaPazTest@3fd7a715]" started-at="2026-05-11T19:56:31Z" name="setDriver" finished-at="2026-05-11T19:56:35Z" duration-ms="3921" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-        <test-method signature="paginaPrincipalGoogle()[pri:0, instance:BuscarGoogleTest@3fd7a715]" started-at="2025-11-07T20:38:29Z" name="paginaPrincipalGoogle" finished-at="2025-11-07T20:38:32Z" duration-ms="3791" status="PASS">
+        <test-method signature="paginaPrincipalUCB()[pri:0, instance:UcbLaPazTest@3fd7a715]" started-at="2026-05-11T19:56:35Z" name="paginaPrincipalUCB" finished-at="2026-05-11T19:56:44Z" duration-ms="8922" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- paginaPrincipalGoogle -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:BuscarGoogleTest@3fd7a715]" started-at="2025-11-07T20:38:32Z" name="closeDriver" finished-at="2025-11-07T20:38:33Z" duration-ms="108" status="PASS">
+        </test-method> <!-- paginaPrincipalUCB -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:UcbLaPazTest@3fd7a715]" started-at="2026-05-11T19:56:44Z" name="closeDriver" finished-at="2026-05-11T19:56:44Z" duration-ms="296" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-      </class> <!-- BuscarGoogleTest -->
+      </class> <!-- UcbLaPazTest -->
     </test> <!-- Command line test -->
-  </suite> <!-- BuscarGoogleTest -->
+  </suite> <!-- UcbLaPazTest -->
 </testng-results>
