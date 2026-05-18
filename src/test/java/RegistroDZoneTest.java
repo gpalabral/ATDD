@@ -96,7 +96,7 @@ public class RegistroDZoneTest {
         
         /************Verificacion de la situacion esperada - Assert ***************/
         
-        /* 
+        
         WebElement iconAlert = driver.findElement(By.xpath("//*[@id=\"login\"]/div/div[2]/div[1]/div[2]/form/div[1]/span[2]/i"));
         Assert.assertEquals(true, iconAlert.isDisplayed());
         
@@ -110,7 +110,7 @@ public class RegistroDZoneTest {
         System.out.println("Valor del attribute::: "+attribute);
         
         Assert.assertEquals("Please enter a valid email address", attribute);
-        */
+        
         
     }
     
