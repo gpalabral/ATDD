@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: BuscadorUCBTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 35.197 sec <<< FAILURE!
+buscarPersonaTest(BuscadorUCBTest)  Time elapsed: 24.804 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<true> but was:<false>
+	at junit.framework.Assert.fail(Assert.java:50)
+	at junit.framework.Assert.failNotEquals(Assert.java:287)
+	at junit.framework.Assert.assertEquals(Assert.java:67)
+	at junit.framework.Assert.assertEquals(Assert.java:147)
+	at junit.framework.Assert.assertEquals(Assert.java:153)
+	at BuscadorUCBTest.buscarPersonaTest(BuscadorUCBTest.java:117)
+
