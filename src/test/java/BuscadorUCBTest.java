@@ -1,10 +1,10 @@
 import java.util.concurrent.TimeUnit;
-import junit.framework.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -110,7 +110,7 @@ public class BuscadorUCBTest {
         WebElement nombreDocente = driver.findElement(By.xpath("//*[@id=\"gvAdministrativos\"]/tbody/tr[2]/td[1]"));
 
         boolean estaPresente = nombreDocente.getText().contains("DURAN");
-        Assert.assertEquals(true, estaPresente);
+        assertEquals(true, estaPresente);
         
     }
     

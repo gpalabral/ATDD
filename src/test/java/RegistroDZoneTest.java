@@ -1,10 +1,10 @@
 import java.util.concurrent.TimeUnit;
-import junit.framework.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -98,7 +98,7 @@ public class RegistroDZoneTest {
         
         
         WebElement iconAlert = driver.findElement(By.xpath("//*[@id=\"login\"]/div/div[2]/div[1]/div[2]/form/div[1]/span[2]/i"));
-        Assert.assertEquals(true, iconAlert.isDisplayed());
+        assertEquals(true, iconAlert.isDisplayed());
         
         System.out.println("Se muestra el icono? "+iconAlert.isDisplayed());
         
@@ -109,7 +109,7 @@ public class RegistroDZoneTest {
         String attribute = emailErrorMessage.getAttribute("data-validate");
         System.out.println("Valor del attribute::: "+attribute);
         
-        Assert.assertEquals("Please enter a valid email address", attribute);
+        assertEquals("Please enter a valid email address", attribute);
         
         
     }

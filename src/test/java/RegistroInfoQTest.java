@@ -1,10 +1,10 @@
 import java.util.concurrent.TimeUnit;
-import junit.framework.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -33,7 +33,7 @@ public class RegistroInfoQTest {
     @BeforeTest
     public void setDriver() throws Exception{
         
-    	 String path = "/Users/gustavo/apps/chromedriver-mac-x64-148/chromedriver";
+    	 String path = "/Users/gustavo.palabral/Documents/MyCoding/chromedriver-mac-arm64";
          
          System.setProperty("webdriver.chrome.driver", path);
          
@@ -70,7 +70,7 @@ public class RegistroInfoQTest {
         
         System.out.println("Se muestra el texto del boton: "+joinLink.getText());
 
-        joinLink.click();;
+        joinLink.click();
         
         //Esperamos 3 segundos para que se renderice la siguiente pagina
         try{
@@ -98,9 +98,9 @@ public class RegistroInfoQTest {
         
         /************Verificacion de la situacion esperada - Assert ***************/
         
-        /* 
+         
         WebElement iconAlert = driver.findElement(By.xpath("//*[@id=\"login\"]/div/div[2]/div[1]/div[2]/form/div[1]/span[2]/i"));
-        Assert.assertEquals(true, iconAlert.isDisplayed());
+        assertEquals(true, iconAlert.isDisplayed());
         
         
         
@@ -111,8 +111,8 @@ public class RegistroInfoQTest {
         String attribute = emailErrorMessage.getAttribute("data-validate");
         System.out.println("Valor del attribute::: "+attribute);
         
-        Assert.assertEquals("Please enter a valid email address", attribute);
-        */
+        assertEquals(attribute, "Please enter a valid email address");
+        
         
     }
     
